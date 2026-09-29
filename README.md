@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Expressions and Practice JSX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React learning project for practicing JavaScript expressions and JSX. The app presents an in-memory job list and lets users create jobs from the browser.
 
-## Available Scripts
+## Why this project is useful
 
-In the project directory, you can run:
+- Demonstrates JSX expressions inside rendered content.
+- Provides a focused example of React component composition (`App` and `CreateJob`).
+- Shows event handling, `useState`, array rendering, and conditional text.
+- Uses Create React App so learners can run and change the example with minimal setup.
 
-### `npm start`
+Jobs are stored only in the current page session. A refresh clears the list, and each generated job title is a random number.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js and npm
+- A modern web browser
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install and run
 
-### `npm run build`
+From the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm ci
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open [http://localhost:3000](http://localhost:3000). The development server reloads the page when source files change.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Try the app
 
-### `npm run eject`
+1. Select **Create Job**.
+2. Observe the available-job count and new job in the list.
+3. Select the button again to add another in-memory job.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Available commands
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Start the development server. |
+| `npm test` | Run the Jest test runner supplied by Create React App. |
+| `npm run build` | Create an optimized production build in `build/`. |
+| `npm run eject` | Copy Create React App configuration into the project. This is irreversible and normally unnecessary. |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```text
+src/
+├── App.js          # Root component and job-list state passed to CreateJob
+├── CreateJob.js    # Job creation UI and JSX expression practice
+├── App.css         # App-specific styles
+├── index.css       # Global styles
+└── index.js        # Browser entry point
+public/             # Static HTML, icons, and manifest assets
+```
 
-## Learn More
+The project uses React 19, React DOM, and `react-scripts` 5.0.1. Dependency versions and scripts are defined in [`package.json`](package.json); `package-lock.json` keeps installations reproducible.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Help and documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For project-specific questions or bug reports, [open an issue](https://github.com/VoidLance/course-files-javascript-react-expressions-and-practice-jsx/issues). Useful external references include:
 
-### Code Splitting
+- [React documentation](https://react.dev/)
+- [JSX documentation](https://react.dev/learn/writing-markup-with-jsx)
+- [Create React App documentation](https://create-react-app.dev/docs/getting-started/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome. Before making a larger change, open an issue to discuss the proposed learning objective or behavior. For a pull request:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Create a focused branch from the default branch.
+2. Make the smallest clear change that improves the example.
+3. Run the relevant command from [Available commands](#available-commands).
+4. Explain the change and verification steps in the pull request.
 
-### Making a Progressive Web App
+Please keep examples beginner-friendly and avoid adding dependencies unless they are necessary to demonstrate the lesson.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Maintainer
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is maintained by [VoidLance](https://github.com/VoidLance). See the repository’s issue tracker for current questions and proposed improvements.
